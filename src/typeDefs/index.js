@@ -7,7 +7,7 @@ module.exports = gql`
     lastName: String
     office: String
     families: [Family]
-    officeAddress: [Office]
+    officeAddress: Office
   }
 
   type Family {
