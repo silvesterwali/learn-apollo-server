@@ -7,6 +7,7 @@ module.exports = gql`
     lastName: String
     office: String
     families: [Family]
+    officeAddress: [Office]
   }
 
   type Family {
@@ -18,9 +19,17 @@ module.exports = gql`
     familyOwner: Employee
   }
 
+  type Office {
+    id: Int!
+    code: String
+    capacity: Int
+    employees: [Employee]
+  }
+
   type Query {
     employees: [Employee]
     employee(id: Int!): Employee
     family: [Family]
+    offices: [Office]
   }
 `;
