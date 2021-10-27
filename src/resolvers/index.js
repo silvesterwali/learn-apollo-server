@@ -15,6 +15,13 @@ module.exports = {
     },
     offices: () => Office,
   },
+  Mutation: {
+    addOffice(_parent, args, _ctx, _info) {
+      const id = Office.length + 1;
+      Office.push({ id, ...args });
+      return Office.find((el) => el.id === id);
+    },
+  },
   Employee: {
     posts(parent, _args, _ctx, _info) {
       return Post.filter((el) => el.userId === parent.id);

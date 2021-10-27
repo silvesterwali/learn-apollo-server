@@ -58,4 +58,8 @@ module.exports = gql`
     post(id: Int!): Post
     offices: [Office]
   }
+
+  type Mutation {
+    addOffice(code: String!, capacity: Int!, phone: String!): Office
+  }
 `;
