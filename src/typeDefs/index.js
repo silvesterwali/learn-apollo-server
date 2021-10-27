@@ -8,6 +8,16 @@ module.exports = gql`
     email: String
     address: Address
     posts: [Post]
+    officeId: Int
+    office: Office
+  }
+
+  type Office {
+    id: Int!
+    code: String
+    capacity: Int
+    phone: String
+    employees: [Employee]
   }
 
   type Address {
@@ -46,5 +56,6 @@ module.exports = gql`
     employee(id: Int!): Employee
     posts: [Post]
     post(id: Int!): Post
+    offices: [Office]
   }
 `;

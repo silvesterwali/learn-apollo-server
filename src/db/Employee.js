@@ -4,6 +4,7 @@ module.exports = [
     name: 'Leanne Graham',
     username: 'Bret',
     email: 'Sincere@april.biz',
+    officeId: 1,
     address: {
       street: 'Kulas Light',
       suite: 'Apt. 556',
@@ -27,7 +28,9 @@ module.exports = [
     name: 'Ervin Howell',
     username: 'Antonette',
     email: 'Shanna@melissa.tv',
-    address: {
+    officeId: 2,
+    addreofficeId: 1,
+    ss: {
       street: 'Victor Plains',
       suite: 'Suite 879',
       city: 'Wisokyburgh',
@@ -50,7 +53,10 @@ module.exports = [
     name: 'Clementine Bauch',
     username: 'Samantha',
     email: 'Nathan@yesenia.net',
-    address: {
+    officeId: 3,
+    addreofficeId: 1,
+
+    ss: {
       street: 'Douglas Extension',
       suite: 'Suite 847',
       city: 'McKenziehaven',
@@ -73,7 +79,9 @@ module.exports = [
     name: 'Patricia Lebsack',
     username: 'Karianne',
     email: 'Julianne.OConner@kory.org',
-    address: {
+    officeId: 1,
+    addreofficeId: 1,
+    ss: {
       street: 'Hoeger Mall',
       suite: 'Apt. 692',
       city: 'South Elvis',
@@ -96,7 +104,9 @@ module.exports = [
     name: 'Chelsey Dietrich',
     username: 'Kamren',
     email: 'Lucio_Hettinger@annie.ca',
-    address: {
+    officeId: 2,
+    addreofficeId: 1,
+    ss: {
       street: 'Skiles Walks',
       suite: 'Suite 351',
       city: 'Roscoeview',
@@ -119,7 +129,9 @@ module.exports = [
     name: 'Mrs. Dennis Schulist',
     username: 'Leopoldo_Corkery',
     email: 'Karley_Dach@jasper.info',
-    address: {
+    officeId: 3,
+    addreofficeId: 1,
+    ss: {
       street: 'Norberto Crossing',
       suite: 'Apt. 950',
       city: 'South Christy',
@@ -142,7 +154,9 @@ module.exports = [
     name: 'Kurtis Weissnat',
     username: 'Elwyn.Skiles',
     email: 'Telly.Hoeger@billy.biz',
-    address: {
+    officeId: 1,
+    addreofficeId: 1,
+    ss: {
       street: 'Rex Trail',
       suite: 'Suite 280',
       city: 'Howemouth',
@@ -165,7 +179,9 @@ module.exports = [
     name: 'Nicholas Runolfsdottir V',
     username: 'Maxime_Nienow',
     email: 'Sherwood@rosamond.me',
-    address: {
+    officeId: 2,
+    addreofficeId: 1,
+    ss: {
       street: 'Ellsworth Summit',
       suite: 'Suite 729',
       city: 'Aliyaview',
@@ -188,7 +204,9 @@ module.exports = [
     name: 'Glenna Reichert',
     username: 'Delphine',
     email: 'Chaim_McDermott@dana.io',
-    address: {
+    officeId: 3,
+    addreofficeId: 1,
+    ss: {
       street: 'Dayna Park',
       suite: 'Suite 449',
       city: 'Bartholomebury',
@@ -211,7 +229,9 @@ module.exports = [
     name: 'Clementina DuBuque',
     username: 'Moriah.Stanton',
     email: 'Rey.Padberg@karina.biz',
-    address: {
+    officeId: 2,
+    addreofficeId: 1,
+    ss: {
       street: 'Kattie Turnpike',
       suite: 'Suite 198',
       city: 'Lebsackbury',
