@@ -3,33 +3,48 @@ const { gql } = require('apollo-server');
 module.exports = gql`
   type Employee {
     id: Int!
-    firstName: String
-    lastName: String
-    office: String
-    families: [Family]
-    officeAddress: Office
+    name: String
+    username: String
+    email: String
+    address: Address
+    posts: [Post]
   }
 
-  type Family {
-    id: Int!
-    employeeId: Int!
-    relation: String
-    firstName: String
-    lastName: String
-    familyOwner: Employee
+  type Address {
+    street: String
+    suite: String
+    city: String
+    zipcode: String
+    geo: Geo
   }
 
-  type Office {
+  type Geo {
+    lat: String
+    lng: String
+  }
+
+  type Post {
     id: Int!
-    code: String
-    capacity: Int
-    employees: [Employee]
+    title: String
+    body: String
+    userId: Int
+    author: Employee
+    comments: [Comment]
+  }
+
+  type Comment {
+    id: Int!
+    name: String
+    email: String
+    body: String
+    postId: Int
+    post: Post
   }
 
   type Query {
     employees: [Employee]
     employee(id: Int!): Employee
-    family: [Family]
-    offices: [Office]
+    posts: [Post]
+    post(id: Int!): Post
   }
 `;
