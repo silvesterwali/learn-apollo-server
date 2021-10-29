@@ -1,13 +1,14 @@
 const { gql } = require('apollo-server');
 
 module.exports = gql`
+  # type of employee
   type Employee {
     id: Int!
     name: String
     username: String
     email: String
     address: Address
-    posts: [Post]
+    posts: [Post] # employee have post
     officeId: Int
     office: Office
   }
@@ -42,6 +43,11 @@ module.exports = gql`
     comments: [Comment]
   }
 
+  input PostContent {
+    title: String!
+    body: String!
+  }
+
   type Comment {
     id: Int!
     name: String
@@ -61,5 +67,6 @@ module.exports = gql`
 
   type Mutation {
     addOffice(code: String!, capacity: Int!, phone: String!): Office
+    createPost(input: PostContent!): Post
   }
 `;

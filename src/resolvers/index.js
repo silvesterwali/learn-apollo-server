@@ -6,11 +6,11 @@ const Office = require('../db/Office');
 module.exports = {
   Query: {
     employees: () => Employees,
-    employee(_parent, args, _ctx, _info) {
+    employee(_parent, args, _ctx, info) {
       return Employees.find((e) => e.id === args.id);
     },
     posts: () => Post,
-    post(_parent, args, _ctx) {
+    post(_parent, args, _ctx, info) {
       return Post.find((el) => el.id === args.id);
     },
     offices: () => Office,
@@ -21,9 +21,14 @@ module.exports = {
       Office.push({ id, ...args });
       return Office.find((el) => el.id === id);
     },
+    createPost(_parent, args, _ctx, _info) {
+      const id = Post.length + 1;
+      Post.push({ id, ...args.input, userId: 1 });
+      return Post.find((el) => el.id === id);
+    },
   },
   Employee: {
-    posts(parent, _args, _ctx, _info) {
+    posts(parent, _args, _ctx, info) {
       return Post.filter((el) => el.userId === parent.id);
     },
     office(parent, _args, _ctx, _info) {
