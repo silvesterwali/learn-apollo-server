@@ -1,14 +1,15 @@
 const { gql } = require('apollo-server');
 
 module.exports = gql`
-  # type of employee
+  #type of employee
   type Employee {
     id: Int!
     name: String
     username: String
     email: String
     address: Address
-    posts: [Post] # employee have post
+    "employee have post"
+    posts: [Post]
     officeId: Int
     office: Office
   }
