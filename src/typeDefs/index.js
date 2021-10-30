@@ -1,10 +1,13 @@
 const { gql } = require('apollo-server');
 
 module.exports = gql`
-  #type of employee
+  """
+  This "Book" type defines the queryable fields for every book in our data source
+  """
   type Employee {
     id: Int!
     name: String
+    " name of employee in unique "
     username: String
     email: String
     address: Address
@@ -58,6 +61,9 @@ module.exports = gql`
     post: Post
   }
 
+  """
+  Query all your resource
+  """
   type Query {
     employees: [Employee]
     employee(id: Int!): Employee
@@ -66,6 +72,9 @@ module.exports = gql`
     offices: [Office]
   }
 
+  """
+  Run all your mutation for modify the resource.
+  """
   type Mutation {
     addOffice(code: String!, capacity: Int!, phone: String!): Office
     createPost(input: PostContent!): Post
